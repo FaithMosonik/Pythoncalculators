@@ -1,3 +1,4 @@
+#MOSONIK FAITH CHEPKOECH SCT211-0044/2022
 class Calculator:
     def __init__(self, num1, num2, choice):
         self.num1 = num1
@@ -12,9 +13,12 @@ class Calculator:
     
     def multiply(self):
         return self.num1 * self.num2
-    
+    #Exception handling
     def divide(self):
-        return self.num1 / self.num2
+        try:
+          return self.num1 / self.num2
+        except ZeroDivisionError:
+            print("Cannot divide by zero.Please try again")
     
     def takeinput(self):
         self.num1 = int(input("Enter the first number "))
